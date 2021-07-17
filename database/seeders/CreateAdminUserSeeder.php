@@ -23,6 +23,7 @@ class CreateAdminUserSeeder extends Seeder
             'firstname' => 'Issognina Schallom', 
             'lastname' => 'Awolou', 
             'pays'=>'Benin',
+            'pseudo'=>"a257f8bd-0da0-4256-9ffe-e6807dfb8746",
             'numTel'=>'0224656',
             'email' => 'sharzen76@gmail.com',
             'password' => bcrypt('schallom'),

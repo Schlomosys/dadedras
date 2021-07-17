@@ -556,7 +556,7 @@ public function updateDoc(Request $request, $id)
         ]);
     
         $cat= new Visibility;
-        $cat->id=3;
+        $cat->id=4;
         $cat->name=$request->input('name');
         $cat->slug=Str::slug($request->input('name')).'_'.time();
         $cat->save();
