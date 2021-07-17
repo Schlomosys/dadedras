@@ -108,7 +108,7 @@ public function publiclire($id){
     $docdad=Docdad::find($id);
     $file_path = storage_path( $docdad->fichier);
     /*return Response::download($file_path);*/
-    return response()->download("C:/xampp/htdocs/dadedras/public".$docdad->fichier);
+    return response()->download("http://dadedras.herokuapp.com/".$docdad->fichier);
 }
     public function users()
     {

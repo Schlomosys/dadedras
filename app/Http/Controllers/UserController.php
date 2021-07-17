@@ -564,9 +564,10 @@ public function addPost($id){
     public function accountlire($id){
         $user = User::findOrFail(auth()->user()->id);
         $docdad=Docdad::find($id);
-        $unstats=Stat::where('user_id', "=", $user->id)->where('docdad_id', "=", $docdad->id)->first()->get();
+        /*$unstats=Stat::where('user_id', "=", $user->id)->where('docdad_id', "=", $docdad->id)->first()->get();*/
         if($docdad->visibility_id==$user->visibility_id){
-            if($unstats != null){
+            if((Stat::where('user_id', "=", $user->id)->where('docdad_id', "=", $docdad->id)->first()->get())!= null){
+                $unstats=Stat::where('user_id', "=", $user->id)->where('docdad_id', "=", $docdad->id)->first()->get();
                 foreach ($unstats as $unstat)
                       {
                         $unstat->datelecture=now();

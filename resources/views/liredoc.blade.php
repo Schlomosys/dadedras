@@ -898,7 +898,7 @@ PDFObject.embed("{{$docdad->fichier}}", "#pdf-viewer");
             <span class="" style="color:red;">[ -Document introuvable- ]</span><br />
             @endif--}}
            <!-- <embed src="{{"http://127.0.0.1:8080/dadedras/public".$docdad->fichier }}" width=100% height=1000px type='application/pdf'/>-->
-              <object data="{{"http://127.0.0.1:8080/dadedras/public".$docdad->fichier }}" type="application/pdf" width="100%" height="1000px">
+             {{-- objectdata=""http://dadedras.herokuapp.com/".$docdad->fichier }}" type="application/pdf" width="100%" height="1000px">
                 <!--<p><b>Example fallback content</b>: This browser does not support PDFs. Please download the PDF to view it: 
                 <a href="{{route('downl',$docdad->id)}}">Download PDF</a>.</p>-->
                 <div><h1 style="color:blue;">Veuillez télécharger le pdf pour l'afficher </h1></div>
@@ -906,7 +906,10 @@ PDFObject.embed("{{$docdad->fichier}}", "#pdf-viewer");
                   
     
                   <a href="{{route('downl',$docdad->id)}}" class="btn btn-danger" style="">Télécharger ici</a></div>
-                </object>  
+                </object>--}}
+                <iframe src="{{"http://127.0.0.1:8080/dadedras/public".$docdad->fichier }}" width="100%" height="1000px">
+                  This browser does not support PDFs. Please download the PDF to view it: 
+                  <a href="../pdf/sample-3pp.pdf">Download PDF</a></iframe>
     
      <!--</section>-->
      
