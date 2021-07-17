@@ -907,7 +907,7 @@ PDFObject.embed("{{$docdad->fichier}}", "#pdf-viewer");
     
                   <a href="{{route('downl',$docdad->id)}}" class="btn btn-danger" style="">Télécharger ici</a></div>
                 </object>--}}
-                <iframe src="{{"http://127.0.0.1:8080/dadedras/public".$docdad->fichier }}" width="100%" height="1000px">
+                <iframe src="{{"http://dadedras.herokuapp.com".$docdad->fichier }}" width="100%" height="1000px">
                   This browser does not support PDFs. Please download the PDF to view it: 
                   <a href="../pdf/sample-3pp.pdf">Download PDF</a></iframe>
     

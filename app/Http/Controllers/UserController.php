@@ -566,7 +566,7 @@ public function addPost($id){
         $docdad=Docdad::find($id);
         /*$unstats=Stat::where('user_id', "=", $user->id)->where('docdad_id', "=", $docdad->id)->first()->get();*/
         if($docdad->visibility_id==$user->visibility_id){
-            if((Stat::where('user_id', "=", $user->id)->where('docdad_id', "=", $docdad->id)->first()->get())!= null){
+            /*if((Stat::where('user_id', "=", $user->id)->where('docdad_id', "=", $docdad->id)->first()->get())!= null){
                 $unstats=Stat::where('user_id', "=", $user->id)->where('docdad_id', "=", $docdad->id)->first()->get();
                 foreach ($unstats as $unstat)
                       {
@@ -575,13 +575,13 @@ public function addPost($id){
                         }
                 /*$unstat->datelecture=now();
                 $unstat->save();*/
-               // $unstat->update(array("datelecture" => now()));
+             /* $unstat->update(array("datelecture" => now()));
 
                 return view('post.accountread',compact('user','docdad'));
 
 
             }
-            else{
+            else{*/
                 $stat= new Stat;
             $stat->datelecture=now();
             $stat->user_id=$user->id;
@@ -589,7 +589,7 @@ public function addPost($id){
             $stat->save();
             /*return view('liredoc',compact('user', 'file', 'filepath'));*/
             return view('post.accountread',compact('user','docdad'));
-            }
+           // }
             
 
         }

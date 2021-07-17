@@ -1682,7 +1682,7 @@
         <!--<div class="row">-->
          
           <div class="container">
-            <object data="{{"http://dadedras.herokuapp.com/".$docdad->fichier }}" type="application/pdf" width="100%" height="1000px">
+            <object data="{{"http://dadedras.herokuapp.com".$docdad->fichier }}" type="application/pdf" width="100%" height="1000px">
                 <!--<p><b>Example fallback content</b>: This browser does not support PDFs. Please download the PDF to view it: 
                 <a href="{{route('downl',$docdad->id)}}">Download PDF</a>.</p>-->
                 <div><h3 style="color:blue; font-size:20px;">Veuillez télécharger le pdf pour l'afficher </h3></div>
